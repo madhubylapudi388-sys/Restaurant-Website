@@ -1,0 +1,413 @@
+/* ==========================================================================
+   1. RESET AND BASE STYLES
+   Basic box-sizing, clean margins, and general font setup
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333333;
+  background-color: #fcf9f6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+
+/* ==========================================================================
+   2. LAYOUT STYLES
+   Section containers, headings, and general structure
+   ========================================================================== */
+
+/* Main section spacing */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Common section headings */
+.section-title {
+  font-size: 28px;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  font-size: 15px;
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 40px;
+}
+
+
+/* ==========================================================================
+   3. COMPONENT STYLES
+   Styles for navbar, hero, cards, buttons, contact and footer
+   ========================================================================== */
+
+/* --- Navigation Bar --- */
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #d35400;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  font-size: 15px;
+  font-weight: bold;
+  color: #2c3e50;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #d35400;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  max-width: 100%;
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #d35400, #e67e22);
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-title {
+  font-size: 40px;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.hero-tagline {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #fff2e6;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-btn {
+  background-color: #ffffff;
+  color: #d35400;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Food Menu Section --- */
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.menu-card {
+  background-color: #ffffff;
+  border: 1px solid #fae5d3;
+  border-radius: 10px;
+  padding: 24px;
+  width: calc(25% - 24px);
+  min-width: 230px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(211, 84, 0, 0.18);
+}
+
+.dish-icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.dish-name {
+  font-size: 17px;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.dish-desc {
+  font-size: 13px;
+  color: #666666;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.dish-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #d35400;
+  background-color: #fef5ec;
+  padding: 6px 14px;
+  border-radius: 15px;
+}
+
+/* --- Special Offers Section --- */
+.offers-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.offers-container {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.offer-card {
+  background-color: #fff9f4;
+  border: 2px dashed #e67e22;
+  border-radius: 10px;
+  padding: 26px 20px;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.offer-badge {
+  background-color: #d35400;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.offer-title {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.offer-desc {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.offer-code {
+  font-size: 13px;
+  color: #2c3e50;
+  background-color: #ffffff;
+  border: 1px solid #ebd5c5;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+/* --- Customer Reviews Section --- */
+.reviews-container {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.review-card {
+  background-color: #ffffff;
+  border: 1px solid #fae5d3;
+  border-radius: 10px;
+  padding: 24px;
+  flex: 1;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.review-stars {
+  color: #f39c12;
+  font-size: 18px;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.review-text {
+  font-size: 14px;
+  font-style: italic;
+  color: #444444;
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.reviewer-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: right;
+}
+
+/* --- Contact & Location Section --- */
+.contact-section {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.contact-container {
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.contact-info {
+  flex: 1;
+  background-color: #fff9f4;
+  padding: 26px;
+  border-radius: 10px;
+  border-left: 4px solid #d35400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+.contact-info h3 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 6px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  color: #444444;
+}
+
+.map-container {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.map-container iframe {
+  width: 100%;
+  min-height: 260px;
+  border: 0;
+}
+
+/* --- Footer --- */
+.footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 24px 20px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+
+/* ==========================================================================
+   4. RESPONSIVE RULES (Mobile & Tablet)
+   Single simple media query stacking Flexbox columns vertically
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* Stack navbar items vertically */
+  .nav-container {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Make hero text more readable on mobile */
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-tagline {
+    font-size: 15px;
+  }
+
+  /* Stack menu cards to full width */
+  .menu-card {
+    width: 100%;
+  }
+
+  /* Stack special offer cards vertically */
+  .offers-container {
+    flex-direction: column;
+  }
+
+  /* Stack review cards vertically */
+  .reviews-container {
+    flex-direction: column;
+  }
+
+  /* Stack contact details and map vertically */
+  .contact-container {
+    flex-direction: column;
+  }
+}
